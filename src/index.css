@@ -1,0 +1,31 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-border: var(--border);
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #000000;
+  --muted: #f4f4f5;
+  --muted-foreground: #71717a;
+  --border: #e4e4e7;
+}
+
+.dark {
+  --background: #000000;
+  --foreground: #ffffff;
+  --muted: #18181b;
+  --muted-foreground: #a1a1aa;
+  --border: #27272a;
+}
+
+@layer base {
+  body {
+    @apply bg-background text-foreground transition-colors duration-300;
+  }
+}

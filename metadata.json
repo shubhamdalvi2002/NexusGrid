@@ -1,0 +1,5 @@
+{
+  "name": "NexusGrid",
+  "description": "A decentralized compute marketplace for sharing and renting CPU/GPU resources.",
+  "requestFramePermissions": []
+}
