@@ -1,5 +1,5 @@
 import React from 'react';
-import { Mail, Phone, MapPin, Twitter, Github, Linkedin, Send } from 'lucide-react';
+import { Mail, Phone, MapPin, Twitter, Github, Linkedin, Instagram, Send } from 'lucide-react';
 import { Button } from '../components/ui/Button';
 import { Card } from '../components/ui/Card';
 
@@ -21,8 +21,7 @@ export const Contact = () => {
               </div>
               <div>
                 <h3 className="text-foreground font-bold mb-1">Email Us</h3>
-                <p className="text-muted-foreground">support@nexusgrid.ai</p>
-                <p className="text-muted-foreground">hello@nexusgrid.ai</p>
+                <p className="text-muted-foreground">aryannawale03@gmail.com</p>
               </div>
             </div>
             <div className="flex items-start gap-4">
@@ -31,7 +30,7 @@ export const Contact = () => {
               </div>
               <div>
                 <h3 className="text-foreground font-bold mb-1">Call Us</h3>
-                <p className="text-muted-foreground">+91 (20) 2765 3168</p>
+                <p className="text-muted-foreground">+91 7775884747</p>
                 <p className="text-muted-foreground">Mon-Fri, 10am-6pm IST</p>
               </div>
             </div>
@@ -41,18 +40,29 @@ export const Contact = () => {
               </div>
               <div>
                 <h3 className="text-foreground font-bold mb-1">Our Office</h3>
-                <p className="text-muted-foreground">PCCOE Incubation Centre</p>
-                <p className="text-muted-foreground">Nigdi, Pune, Maharashtra 411044</p>
+                <p className="text-muted-foreground">UNIVERSE Campus, Niramay, New Mumbai Hwy</p>
+                <p className="text-muted-foreground">Tathawade, Pune, Maharashtra 411033</p>
               </div>
             </div>
 
             <div className="pt-8 border-t border-border">
               <h4 className="text-foreground font-bold mb-4">Follow Us</h4>
               <div className="flex gap-4">
-                {[Twitter, Github, Linkedin].map((Icon, i) => (
-                  <button key={i} className="w-10 h-10 bg-muted rounded-full flex items-center justify-center hover:bg-muted/80 transition-all text-muted-foreground hover:text-foreground">
-                    <Icon className="w-5 h-5" />
-                  </button>
+                {[
+                  { icon: Twitter, link: "#" },
+                  { icon: Github, link: "#" },
+                  { icon: Linkedin, link: "#" },
+                  { icon: Instagram, link: "https://www.instagram.com/nexus__grid?igsh=OW5rYzRobHh3cjdo&utm_source=qr" }
+                ].map((social, i) => (
+                  <a 
+                    key={i} 
+                    href={social.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-10 h-10 bg-muted rounded-full flex items-center justify-center hover:bg-muted/80 transition-all text-muted-foreground hover:text-foreground"
+                  >
+                    <social.icon className="w-5 h-5" />
+                  </a>
                 ))}
               </div>
             </div>
@@ -91,7 +101,7 @@ export const Contact = () => {
         {/* Map Section */}
         <div className="mt-24 w-full h-[450px] bg-muted border border-border rounded-3xl overflow-hidden relative shadow-2xl">
           <iframe 
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3780.273282409943!2d73.75906427519488!3d18.65172878246747!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2b9e76c6fa207%3A0x1b5f240191074a1!2sPimpri%20Chinchwad%20College%20of%20Engineering%20(PCCOE)!5e0!3m2!1sen!2sin!4v1711818260000!5m2!1sen!2sin" 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3781.332306713606!2d73.7485293751936!3d18.60412498251249!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2bb0000000001%3A0x6b8f8f8f8f8f8f8f!2sTathawade%2C%20Pune%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1711818260000!5m2!1sen!2sin" 
             width="100%" 
             height="100%" 
             style={{ border: 0 }} 

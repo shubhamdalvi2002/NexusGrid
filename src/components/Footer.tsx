@@ -1,5 +1,5 @@
 import React from 'react';
-import { Grid3X3, Github, Twitter, Linkedin, Mail } from 'lucide-react';
+import { Grid3X3, Github, Twitter, Linkedin, Mail, Instagram } from 'lucide-react';
 
 export const Footer = ({ onNavigate }: { onNavigate: (page: string) => void }) => {
   return (
@@ -17,10 +17,22 @@ export const Footer = ({ onNavigate }: { onNavigate: (page: string) => void }) =
               The decentralized marketplace for high-performance computing. Powering the next generation of AI and data science with idle resources.
             </p>
             <div className="flex space-x-4">
-              {[Twitter, Github, Linkedin, Mail].map((Icon, i) => (
-                <button key={i} className="w-10 h-10 bg-muted rounded-full flex items-center justify-center hover:bg-muted/80 transition-all text-muted-foreground hover:text-foreground">
-                  <Icon className="w-5 h-5" />
-                </button>
+              {[
+                { icon: Twitter, link: "#" },
+                { icon: Github, link: "#" },
+                { icon: Linkedin, link: "#" },
+                { icon: Mail, link: "mailto:aryannawale03@gmail.com" },
+                { icon: Instagram, link: "https://www.instagram.com/nexus__grid?igsh=OW5rYzRobHh3cjdo&utm_source=qr" }
+              ].map((social, i) => (
+                <a 
+                  key={i} 
+                  href={social.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-10 h-10 bg-muted rounded-full flex items-center justify-center hover:bg-muted/80 transition-all text-muted-foreground hover:text-foreground"
+                >
+                  <social.icon className="w-5 h-5" />
+                </a>
               ))}
             </div>
           </div>
